@@ -1,0 +1,14 @@
+#+begin_quote
+Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+#+end_quote
+
+** Expression ​#1
+#+name: 1
+#+begin_src scheme
+10
+#+end_src
+
+Because it is only a number, the interpreter will return \(10\)
+
+#+RESULTS: 1
+: 10
