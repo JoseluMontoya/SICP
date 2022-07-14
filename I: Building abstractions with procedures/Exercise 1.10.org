@@ -29,7 +29,7 @@ Consider the following procedures, where A is the procedure defined above:
 #+begin_quote
 Give concise mathematical definitions for the functions computed by the
 procedures f, g, and h for positive integer values of n. For example, (k n)
-computes 5n^2.
+computes 5n^{2}.
 #+end_quote
 
 Let's use the substitution model to get the values of the expressions
@@ -55,7 +55,7 @@ Let's use the substitution model to get the values of the expressions
 (A 0 512)
 1024
 #+end_src
-Which is $2^10$.
+Which is 2^{10}.
 
 #+begin_src scheme
 (A 2 4)
@@ -75,7 +75,7 @@ Which is $2^10$.
 (A 1 16)
 #+end_src
 And thanks to the analysis of the previous expression, we know that (A 1 16)
-equals $2^{16}$ = $2 \uparrow\uparrow 4$ = $^4 2 = 65536$, with
+equals 2^{16} = $2 \uparrow\uparrow 4$ = $^4 2 = 65536$, with
 $2 \uparrow\uparrow 4$ and $^4 2$ being the notation for
 the [[http://en.wikipedia.org/wiki/Tetration][tetration]].
 
