@@ -75,7 +75,7 @@ Which is $2^10$.
 (A 1 16)
 #+end_src
 And thanks to the analysis of the previous expression, we know that (A 1 16)
-equals $2^16=2^{2^2^{2^2}} = 2 \uparrow\uparrow 4 = ^4 2 = 65536$, with
+equals $2^16=2^{2^2^{2^2}}$ = $2 \uparrow\uparrow 4$ = $^4 2 = 65536$, with
 $2 \uparrow\uparrow 4$ and $^4 2$ being the notation for
 the [[http://en.wikipedia.org/wiki/Tetration][tetration]].
 
@@ -93,12 +93,15 @@ the [[http://en.wikipedia.org/wiki/Tetration][tetration]].
 Which is the same expression as the last one.
 
 Given what we have seen, we can safely state that:
+
 $$
 f(n) = 2n
 $$
+
 $$
 g(n) = 2^n
 $$
+
 $$
 k(n) = 2 \uparrow\uparrow n
 $$
