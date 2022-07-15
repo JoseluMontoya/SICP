@@ -1,0 +1,38 @@
+#+begin_quote
+A function f is defined by the rule that
+
+$$
+f(n) =
+\begin{cases}
+n \quad \text{if} \quad n<3\\
+f(n-1) + 2f(n-2) + 3f(n-3) \quad \text{if} \quad n \geq 3
+\end{cases}
+$$
+
+Write a procedure that computes $f$ by means of a recursive process. Write a
+procedure that computes $f$ by means of an iterative process.
+#+end_quote
+
+Recursive procedure
+#+begin_src scheme
+(define (f n)
+  (if (< n 3)
+      n
+      (+ (f (- n 1))
+         (* 2 (f (- n 2)))
+         (* 3 (f (- n 3))))))
+#+end_src
+
+Iterative process
+#+begin_src scheme
+(define (f n)
+  (define (f-iter f1 f2 f3 n first-iter?)
+    (cond ((and (= n 0) (not first-iter?) (+ f1 (* 2 f2) (* 3 f3))))
+          ((and (< n 3) first-iter?) n)
+          (else (f-iter (+ f1 (* 2 f2) (* 3 f3))
+                        f1
+                        f2
+                        (- n 1)
+                        #f))))
+  (f-iter 0 1 2 n #t))
+#+end_src
