@@ -37,5 +37,5 @@ And the second one as such
 7
 #+end_src
 
-As we can see, the process of the first procedure is iterative, while the
-process of the second one is recursive.
+As we can see, the process of the first procedure is recursve, while the
+process of the second one is iterative.
