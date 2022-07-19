@@ -2,16 +2,15 @@
 Observe that our model of evaluation allows for combinations whose operators are
 compound expres- sions. Use this observation to describe the behavior of the
 following procedure:
-#+end_quote
 #+begin_src scheme
 (define (a-plus-abs-b a b)
   ((if (> b 0) + -) a b))
 #+end_src
+#+end_quote
 
 What the procedure is going to do is the following:
 - If =b= is greater than 0, then the =if= statement is going to return the
-  operator =+=
+  operator =+=.
 - If 0 is greater than =b=, then the =if= statement is going to return the
-  operator =-=
-This way, the procedure will do what his name implies: sum =a= and the
-absolute value of =b=
+  operator =-=. This way, the procedure will do what his name implies: sum =a=
+  and the absolute value of =b=.

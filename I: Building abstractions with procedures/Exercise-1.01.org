@@ -1,0 +1,163 @@
+#+options: toc:nil
+#+begin_quote
+Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+#+end_quote
+
+- Expression ​#1
+    #+name: 1
+    #+begin_src scheme
+    10
+    #+end_src
+
+    Because it is only a number, the interpreter will return 10
+
+    #+RESULTS: 1
+    : 10
+
+- Expression ​#2
+    #+name: 2
+    #+begin_src scheme
+    (+ 5 3 4)
+    #+end_src
+
+    If we apply + to 5, 3 and 4, we get 5 + 3 + 4 = 12
+
+    #+RESULTS: 2
+    : 12
+
+- Expression ​#3
+    #+name: 3
+    #+begin_src scheme
+    (- 9 1)
+    #+end_src
+
+    If we apply - to 9 and 1 we get 9 - 1 = 8
+
+    #+RESULTS: 3
+    : 8
+
+- Expression ​#4
+    #+name: 4
+    #+begin_src scheme
+    (/ 6 2)
+    #+end_src
+
+    If we apply / to 6 and 2 we get 6/2 = 3
+
+    #+RESULTS: 4
+    : 3
+
+- Expression ​#5
+    #+name: 5
+    #+begin_src scheme
+    (+ (* 2 4) (- 4 6))
+    #+end_src
+
+    First, we evaluate the inner expressions
+
+    - (* 2 4) = 2 * 4 = 8
+    - (- 4 6) = 4 - 6 = -2
+
+    Then, we substitute and evaluate the final one
+
+    - (+ 8 -2) = 8 + -2 = 6
+
+    #+RESULTS: 5
+    : 6
+
+- Expression ​#6
+    #+name: 6
+    #+begin_src scheme :session "1.1"
+    (define a 3)
+    #+end_src
+
+    Since we have defined a variable, the interpreter won't return anything
+
+    #+RESULTS: 6
+    : #<unspecified>
+
+- Expression ​#7
+    #+name: 7
+    #+begin_src scheme :session "1.1"
+    (define b (+ a 1))
+    #+end_src
+
+    The interpreter will return the same as in the previous expression: nothing
+
+    #+RESULTS: 7
+    : #<unspecified>
+
+- Expression ​#8
+    #+name: 8
+    #+begin_src scheme :session "1.1"
+    (+ a b (* a b))
+    #+end_src
+
+    The interpreter will calculate first (* a b) = a * b = 3 * 4 = 12, and then
+    (+ a b 12) = a + b + 12 = 3 + 4 + 12 = 19
+
+    #+RESULTS: 8
+    : 19
+
+- Expression ​#9
+    #+name: 9
+    #+begin_src scheme :session "1.1"
+    (= a b)
+    #+end_src
+
+    Since a = 3 and b = 4, the interpreter will return #t (False)
+
+    #+RESULTS: 9
+    : #f
+
+- Expression ​#10
+    #+name: 10
+    #+begin_src scheme :session "1.1"
+    (if (and (> b a) (< b (* a b)))
+        b
+        a)
+    #+end_src
+
+    Since b > a and b < (a * b), what the interpreter will return is 4
+
+    #+RESULTS: 10
+    : 4
+
+- Expression ​#11
+    #+name: 11
+    #+begin_src scheme :session "1.1"
+    (cond ((= a 4) 6)
+        ((= b 4) (+ 6 7 a))
+        (else 25))
+    #+end_src
+
+    a doesn't equal 4, but b does, so the interpreter is going to return 6 + 7 + a = 16
+
+    #+RESULTS: 11
+    : 16
+
+- Expression ​#12
+    #+name: 12
+    #+begin_src scheme :session "1.1"
+    (+ 2 (if (> b a) b a))
+    #+end_src
+
+    Since b > a, the interpreter is going to return 2 + b = 6
+
+    #+RESULTS: 12
+    : 6
+
+- Expression ​#13
+    #+name: 13
+    #+begin_src scheme :session "1.1"
+    (* (cond ((> a b) a)
+            ((< a b) b)
+            (else -1))
+    (+ a 1))
+    #+end_src
+
+    Since a < b, the cond is going to evaluate t b, so the interpreter is gonna
+    return (* b (+ a 1)) = b * (a + 1) = 16
+
+    #+RESULTS: 13
+    : 16

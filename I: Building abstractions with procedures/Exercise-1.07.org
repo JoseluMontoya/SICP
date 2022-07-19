@@ -1,3 +1,4 @@
+#+options: toc:nil
 #+begin_quote
 The =good-enough?= test used in computing square roots will not be very effective
 for finding the square roots of very small numbers. Also, in real computers,
@@ -16,7 +17,7 @@ going to be around the same size as =x= itself. For example, if =x= is indeed 0.
 his square root is going to be approximately 0.0316, but =good-enough?= is going
 to give the green light to values as low as 0.01 (one third of the correct
 answer) and as big as 0.0439 (1.38 times the original answer) (those aren't
-exact extreme values because it is an open set, but my point came across)
+exact extreme values because it is an open set, but my point came across).
 
 =good-enough?= is going to be bad for large numbers because, if the precision in
 the calculations itself is bigger than our threshold because of its size,
