@@ -1,6 +1,6 @@
 #+begin_quote
 The sine of an angle (specified in radians) can be computed by making use of the
-approximation $sin x \aprox x$ if $x$ is sufficiently small, and the
+approximation $\sin x \approx x$ if $x$ is sufficiently small, and the
 trigonometric identity
 
 $$
@@ -33,9 +33,9 @@ It will be applied 5 times, since thats the amount of times you have to divide
 For the order of growth in space, we have to look at the depth of the tree. This
 will be how many times =a= has to be divided by 3 in order to make it less than
 0.1, or in other words, the closest integer to =k= which keeps $|a|/3^k < 0.1$
-with =k= = $\log_3 10 |a|$. This number is just the ceiling of =k=
-$\lceiling k \rceiling$ = $\lceiling \log_3 10 |a| \rceiling$, which means that
-the order of growth in space will be $\Theta(log a)$
+with =k= = $\log_3 (10 |a|)$. This number is just the ceiling of =k=
+$\lceil k \rceil$ = $\lceil \log_3 10 |a|\rceil$, which means that
+the order of growth in space will be $\Theta(\log a)$
 
 Since each sine call only does one sine call, the order of growth in steps
-will be $\Theta(log a)$ as well.
+will be $\Theta(\log a)$ as well.
