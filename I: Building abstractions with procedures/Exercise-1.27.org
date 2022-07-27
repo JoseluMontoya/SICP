@@ -6,7 +6,7 @@ whether $a^n$ is congruent to $a$ modulo $n$ for every $a < n$, and try your
 procedure on the given Carmichael numbers.
 #+end_quote
 
-#+begin_src scheme :session "1.25" :exports none
+#+begin_src scheme :session "1.27" :exports none
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
         ((even? exp)
@@ -21,7 +21,7 @@ procedure on the given Carmichael numbers.
 (define (square a) (* a a))
 #+end_src
 
-#+begin_src scheme :session "1.25"
+#+begin_src scheme :session "1.27"
 (define (fermat-test n)
   (define (try-it-iter a)
     (cond ((and (= (expmod a n n) a) (= n (+ a 1)))
@@ -37,42 +37,42 @@ procedure on the given Carmichael numbers.
 
 Let's try the new Fermat test with the Carmichael numbers in footnote 47
 
-#+begin_src scheme :session "1.25" :exports both
+#+begin_src scheme :session "1.27" :exports both
 (fermat-test 561)
 #+end_src
 
 #+RESULTS:
 : #t
 
-#+begin_src scheme :session "1.25" :exports both
+#+begin_src scheme :session "1.27" :exports both
 (fermat-test 1105)
 #+end_src
 
 #+RESULTS:
 : #t
 
-#+begin_src scheme :session "1.25" :exports both
+#+begin_src scheme :session "1.27" :exports both
 (fermat-test 1729)
 #+end_src
 
 #+RESULTS:
 : #t
 
-#+begin_src scheme :session "1.25" :exports both
+#+begin_src scheme :session "1.27" :exports both
 (fermat-test 2465)
 #+end_src
 
 #+RESULTS:
 : #t
 
-#+begin_src scheme :session "1.25" :exports both
+#+begin_src scheme :session "1.27" :exports both
 (fermat-test 2821)
 #+end_src
 
 #+RESULTS:
 : #t
 
-#+begin_src scheme :session "1.25" :exports both
+#+begin_src scheme :session "1.27" :exports both
 (fermat-test 6601)
 #+end_src
 
