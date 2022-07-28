@@ -45,5 +45,5 @@ b)
        (if (> a b)
            result
            (iter (next a) (* result (term a)))))
-     (iter a 0))
+     (iter a 1))
    #+end_src
