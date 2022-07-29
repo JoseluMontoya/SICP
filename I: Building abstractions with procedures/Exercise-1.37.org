@@ -33,12 +33,12 @@ b) If your =cont-frac= procedure generates a recursive process, write one that
 
 a)
     #+begin_src scheme :session "1.37"
-   (define (cont-frac n d k)
-     (define (iter i)
-       (if (= i (+ k 1))
-           0
-           (/ (n i) (+ (d i) (iter (+ i 1))))))
-     (iter 1))
+    (define (cont-frac n d k)
+      (define (iter i)
+        (if (= i (+ k 1))
+            0
+            (/ (n i) (+ (d i) (iter (+ i 1))))))
+      (iter 1))
     #+end_src
 
     #+RESULTS:
@@ -56,3 +56,14 @@ a)
     approximation accurate to 4 decimal places, we need $k = 11$
 
 b)
+    #+begin_src scheme :session "1.37"
+    (define (cont-frac n d k)
+      (define (iter i carry)
+        (if (= i 0)
+            carry
+            (iter (- i 1) (/ (n (- i 1)) (+ (d (- i 1)) carry)))))
+      (iter (+ k 1) 0))
+    #+end_src
+
+    #+RESULTS:
+    : #<void>
