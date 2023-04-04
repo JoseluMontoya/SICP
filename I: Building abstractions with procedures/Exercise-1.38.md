@@ -1,0 +1,26 @@
+    In 1737, the Swiss mathematician Leonhard Euler published a memoir De Fractionibus Continuis, which included a continued fraction expansion for $e − 2$, where e is the base of the natural logarithms. In this fraction, the $N_i$ are all 1, and the $D_i$ are successively 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8,... . Write a program that uses your =cont-frac= procedure from Exercise 1.37 to approximate e, based on Euler’s expansion.
+
+```scheme :session,"1.38"
+(define (cont-frac n d k)
+    (define (iter i)
+    (if (= i (+ k 1))
+        0
+        (/ (n i) (+ (d i) (iter (+ i 1))))))
+    (iter 1))
+```
+
+: #&lt;void>
+
+```scheme :session,"1.38"
+(define (e-aprox k)
+  (define (d i)
+    (if (= (remainder (+ i 1) 3) 0)
+        (* (/ (+ i 1) 3) 2)
+        1))
+  (+ (cont-frac (lambda (i) 1.0)
+                d
+                k) 2))
+```
+
+: #&lt;void>
+
