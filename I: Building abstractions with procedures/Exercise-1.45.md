@@ -11,7 +11,7 @@
 > implement a simple procedure for computing $n^{th}$ roots using =fixed-point=,
 > =average-damp=, and the =repeated= procedure of Exercise 1.43. Assume that any
 > arithmetic operations you need are available as primitives.
-```scheme :exports,none,:session,"1.44"
+```scheme
 (define tolerance 0.00001)
 
 (define (fixed-point f first-guess)
