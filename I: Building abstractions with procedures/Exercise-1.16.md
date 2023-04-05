@@ -1,5 +1,5 @@
 > Design a procedure that evolves an iterative exponentiation process that uses
-> successive squaring and uses a logarithmic number of steps, as does =fast-exp=.
+> successive squaring and uses a logarithmic number of steps, as does `fast-exp`.
 > (Hint: Using the observation that $(b^{n/2})^2 = (b^2)^{n/2}$, keep, along
 > with the exponent $n$ and the base $b$, an additional state variable $a$, and
 > define the state transformation in such a way that the product $ab^n$ is
@@ -8,9 +8,10 @@
 > In general, the technique of defining an invariant quantity that remains
 > unchanged from state to state is a powerful way to think about the design of
 > iterative algorithms.)
+
 What where going to do is apply the state change
 
-\\begin{align\*} a \\rightarrow a^\\prime\\\\ b \\rightarrow b^\\prime\\\\ n \\rightarrow n^\\prime\\\\ \\end{align\*}
+$$\begin{align*} a \rightarrow a^\prime\newline b \rightarrow b^\prime\newline n \rightarrow n^\prime\newline \end{align*}$$
 
 With $a^\\prime = a$, $b^\\prime = b^2$ and $n^\\prime = n/2$ if $n$ is even, and $a^\\prime = a \\cdot b$, $b^\\prime = b$ and $n^\\prime = n - 1$ if $n$ isn't even.
 
