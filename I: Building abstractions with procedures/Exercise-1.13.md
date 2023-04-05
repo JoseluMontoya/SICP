@@ -2,27 +2,42 @@
 > $\phi = (1 + \sqrt{5})/2$. Hint: Let $\psi = (1 - \sqrt{5})/2$. Use induction
 > and the definition of the Fibonacci numbers (see Section 1.2.2) to prove that
 > $\text{Fib}(n) = (\phi^n - \psi^n )/ \sqrt{5}$.
+
 First, as the hint says, let's prove by induction the following formula
 
-$$ \\text{Fib}(n) = (\\phi^n - \\psi^n )/ \\sqrt{5} $$
+$$ \text{Fib}(n) = (\phi^n - \psi^n )/ \sqrt{5} $$
 
-with $\\phi = (1 + \\sqrt{5})/2$ and $\\psi = (1 - \\sqrt{5})/2$.
+with $\phi = (1 + \sqrt{5})/2$ and $\psi = (1 - \sqrt{5})/2$.
 
-1.  We check for $n = 1$ \\begin{align\*} \\text{Fib}(n = 1) &= (\\phi^1 - \\psi^1 )/ \\sqrt{5}\\\\ &= (1 + \\sqrt{5} - 1 + \\sqrt{5})/2\\sqrt{5}\\\\ &= 2\\sqrt{5}/2\\sqrt{5} = 1\\\\ \\end{align\*}
+1.  We check for $n = 1$
+
+$$
+\begin{align*}
+\text{Fib}(n = 1) &= (\phi^1 - \psi^1 )/ \sqrt{5}\newline &= (1 + \sqrt{5} - 1 + \sqrt{5})/2\sqrt{5}\newline &= 2\sqrt{5}/2\sqrt{5} = 1\newline
+\end{align*}
+$$
+
 2.  We apply the inductive hypothesis, in which we state that the expression holds true up to $n$
-3.  We check for $n + 1$ $$\\text{Fib}(n+1) = (\\phi^{n+1} - \\psi^{n+1} )/ \\sqrt{5}$$
+3.  We check for $n + 1$ $$\text{Fib}(n+1) = (\phi^{n+1} - \psi^{n+1} )/ \sqrt{5}$$
 
-Since $\\text{Fib}(n+1) = \\text{Fib}(n) + \\text{Fib}(n-1)$, were going to develop this expression and see if it leads us to the one were trying to prove.
+Since $\text{Fib}(n+1) = \text{Fib}(n) + \text{Fib}(n-1)$, were going to develop this expression and see if it leads us to the one were trying to prove.
 
-\\begin{align\*} \\text{Fib}(n+1) = \\text{Fib}(n) + \\text{Fib}(n-1)\\\\ &= (\\phi^n - \\psi^n )/ \\sqrt{5} + (\\phi^{n-1} - \\psi^{n-1} )/ \\sqrt{5}\\\\ &= (\\phi^n + \\phi^{n-1} - (\\psi^n + \\psi^{n-1}))/ \\sqrt{5}\\\\ &= (((1 + \\phi^{-1})/ \\phi)\\phi^{n+1} - ((1 + \\psi^{-1})/ \\psi)\\psi^{n+1} )/ \\sqrt{5}\\\\ \\end{align\*}
+$$
+\begin{align*}
+\text{Fib}(n+1) &= \text{Fib}(n) + \text{Fib}(n-1)\newline
+&= (\phi^n - \psi^n )/ \sqrt{5} + (\phi^{n-1} - \psi^{n-1} )/ \sqrt{5}\newline
+&= (\phi^n + \phi^{n-1} - (\psi^n + \psi^{n-1}))/ \sqrt{5}\newline
+&= (((1 + \phi^{-1})/ \phi)\phi^{n+1} - ((1 + \psi^{-1})/ \psi)\psi^{n+1} )/ \sqrt{5}\newline
+\end{align*}
+$$
 
-And because $((1 + \\phi^{-1})/ \\phi) = ((1 + \\psi^{-1})/ \\psi) = 1$, the expression for $\\text{Fib}(b)$ is proven.
+And because $((1 + \phi^{-1})/ \phi) = ((1 + \psi^{-1})/ \psi) = 1$, the expression for $\text{Fib}(b)$ is proven.
 
-Now, to prove that $\\text{Fib}(n)$ is the closest integer to $\\phi^n/ \\sqrt{5}$, what were going to do is to prove that $\\left|\\psi^n\\right|/ \\sqrt{5} &lt; 0.5$ for any $n$.
+Now, to prove that $\text{Fib}(n)$ is the closest integer to $\phi^n/ \sqrt{5}$, what were going to do is to prove that $\left|\psi^n\right|/ \sqrt{5} &lt; 0.5$ for any $n$.
 
-$$ f(n = 1) = \\left|\\psi^1\\right|/ \\sqrt{5} = 0.27 $$
+$$ f(n = 1) = \left|\psi^1\right|/ \sqrt{5} = 0.27 $$
 
-$$ \\frac{\\partial}{\\partial n} f(n) = \\frac{\\partial}{\\partial n} \\left|\\psi^n\\right|/ \\sqrt{5} = \\frac{\\partial}{\\partial n} (-\\psi)^n/ \\sqrt{5} = (-\\psi)^n/ \\sqrt{5} \\ln{(-\\psi)} &lt; 0 $$
+$$ \frac{\partial}{\partial n} f(n) = \frac{\partial}{\partial n} \left|\psi^n\right|/ \sqrt{5} = \frac{\partial}{\partial n} (-\psi)^n/ \sqrt{5} = (-\psi)^n/ \sqrt{5} \ln{(-\psi)} &lt; 0 $$
 
 Which means that $f(n) &lt; 0.5$, and proves that $\\text{Fib}(n)$ is the closes integer to $\\phi^n/ \\sqrt{5}$.
 
