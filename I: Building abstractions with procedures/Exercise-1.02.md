@@ -1,8 +1,4 @@
-> Translate the following expression into prefix form:
-
-$$
-\frac{5 + 4 + (2 - (3 - (6 + \frac{4}{5})))}{3(6 - 2)(2 - 7)}
-$$
+> Translate the following expression into prefix form: $$\frac{5 + 4 + (2 - (3 - (6 + \frac{4}{5})))}{3(6 - 2)(2 - 7)}$$
 
 What we are going to do is find the outermost operation, and change his notation to prefix. We start with the fraction
 
