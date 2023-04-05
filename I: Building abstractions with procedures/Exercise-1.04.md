@@ -1,45 +1,11 @@
-    Observe that our model of evaluation allows for combinations whose operators are
-    compound expres- sions. Use this observation to describe the behavior of the
-    following procedure:
-    #+begin_src scheme
-    (define (a-plus-abs-b a b)
-      ((if (> b 0) + -) a b))
-    #+end_src
+Observe that our model of evaluation allows for combinations whose operators arecompound expressions. Use this observation to describe the behavior of the following procedure:
+```scheme
+(define (a-plus-abs-b a b)
+  ((if (> b 0) + -) a b))
+```
 
 What the procedure is going to do is the following:
 
--   If 
-
-    `b`
-
-     is greater than 0, then the 
-
-    `if`
-
-     statement is going to return the operator 
-
-    `+`
-
-    .
--   If 0 is greater than 
-
-    `b`
-
-    , then the 
-
-    `if`
-
-     statement is going to return the operator 
-
-    `-`
-
-    . This way, the procedure will do what his name implies: sum 
-
-    `a`
-
-     and the absolute value of 
-
-    `b`
-
-    .
+-   If `b` is greater than 0, then the `if` statement is going to return the operator `+`.
+-   If 0 is greater than `b`, then the `if` statement is going to return the operator `-`. This way, the procedure will do what his name implies: sum `a` and the absolute value of `b`.
 
