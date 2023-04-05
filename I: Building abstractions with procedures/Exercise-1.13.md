@@ -1,8 +1,7 @@
-    Prove that $\text{Fib}(n)$ is the closest integer to $\phi^n/ \sqrt{5}$, where
-    $\phi = (1 + \sqrt{5})/2$. Hint: Let $\psi = (1 - \sqrt{5})/2$. Use induction
-    and the definition of the Fibonacci numbers (see Section 1.2.2) to prove that
-    $\text{Fib}(n) = (\phi^n - \psi^n )/ \sqrt{5}$.
-
+> Prove that $\text{Fib}(n)$ is the closest integer to $\phi^n/ \sqrt{5}$, where
+> $\phi = (1 + \sqrt{5})/2$. Hint: Let $\psi = (1 - \sqrt{5})/2$. Use induction
+> and the definition of the Fibonacci numbers (see Section 1.2.2) to prove that
+> $\text{Fib}(n) = (\phi^n - \psi^n )/ \sqrt{5}$.
 First, as the hint says, let's prove by induction the following formula
 
 $$ \\text{Fib}(n) = (\\phi^n - \\psi^n )/ \\sqrt{5} $$

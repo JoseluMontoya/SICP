@@ -1,7 +1,6 @@
-    Show that the golden ratio $\phi$ (Section 1.2.2) is a fixed point of the
-    transformation $x \mapsto 1 + 1/x$, and use this fact to compute $\phi$ by means
-    of the fixed-point procedure.
-
+> Show that the golden ratio $\phi$ (Section 1.2.2) is a fixed point of the
+> transformation $x \mapsto 1 + 1/x$, and use this fact to compute $\phi$ by means
+> of the fixed-point procedure.
 ```scheme :session,"1.35"
 (define tolerance 0.00001)
 (define (fixed-point f first-guess)
