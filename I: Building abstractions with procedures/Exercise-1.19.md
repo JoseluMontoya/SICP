@@ -1,6 +1,6 @@
 > There is a clever algorithm for computing the Fibonacci numbers in a logarithmic
 > number of steps. Recall the transformation of the state variables $a$ and $b$ in
-> the =fib-iter= process of Section1.2.2: $a \leftarrow a + b$ and $b \leftarrow a$.
+> the `fib-iter` process of Section1.2.2: $a \leftarrow a + b$ and $b \leftarrow a$.
 > Call this transformation $T$, and observe that applying $T$ over and over again
 > $n$ times, starting with 1 and 0, produces the pair $\text{Fib}(n + 1)$ and
 > $\text{Fib}(n)$. In other words, the Fibonacci numbers are produced by applying
@@ -12,10 +12,10 @@
 > using a single transformation $T_{p^\prime q^\prime}$ of the same form, and
 > compute $p^\prime$ and $q^\prime$ in terms of $p$ and $q$. This gives us an
 > explicit way to square these transformations, and thus we can compute $T^n$
-> using successive squaring, as in the =fast-expt= procedure. Put this all together
+> using successive squaring, as in the `fast-expt` procedure. Put this all together
 > to complete the following procedure, which runs in a logarithmic number of
 > steps:
-> #+begin_src scheme
+> ```scheme
 > (define (fib n)
 >   (fib-iter 1 0 0 1 n))
 > (define (fib-iter a b p q count)
@@ -31,8 +31,7 @@
 >                         p
 >                         q
 >                         (- count 1)))))
-> #+end_src
-\\newpage
+> ```
 
 ```scheme 
 (define (fib n)
