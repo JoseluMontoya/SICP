@@ -29,43 +29,41 @@
     (try-it-iter 1))
 ```
 
-: #&lt;void>
-
 Let's try the new Fermat test with the Carmichael numbers in footnote 47
 
 ```scheme :session,"1.27",:exports,both
 (fermat-test 561)
 ```
-
-: #t
-
+```
+#t
+```
 ```scheme :session,"1.27",:exports,both
 (fermat-test 1105)
 ```
-
-: #t
-
+```
+#t
+```
 ```scheme :session,"1.27",:exports,both
 (fermat-test 1729)
 ```
-
-: #t
-
+```
+#t
+```
 ```scheme :session,"1.27",:exports,both
 (fermat-test 2465)
 ```
-
-: #t
-
+```
+#t
+```
 ```scheme :session,"1.27",:exports,both
 (fermat-test 2821)
 ```
-
-: #t
-
+```
+#t
+```
 ```scheme :session,"1.27",:exports,both
 (fermat-test 6601)
 ```
-
-: #t
-
+```
+#t
+```
