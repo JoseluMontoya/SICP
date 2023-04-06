@@ -18,8 +18,6 @@
 (define (compose f g) (lambda (x) (f (g x))))
 ```
 
-: #&lt;void>
-
 ```scheme :session,"1.43"
 (define (repeated f n)
   (define (repeated-iter f-iter n)
@@ -29,5 +27,4 @@
   (repeated-iter (lambda (x) x) n))
 ```
 
-: #&lt;void>
 
