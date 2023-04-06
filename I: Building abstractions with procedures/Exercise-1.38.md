@@ -9,7 +9,6 @@
     (iter 1))
 ```
 
-: #&lt;void>
 
 ```scheme :session,"1.38"
 (define (e-aprox k)
@@ -21,6 +20,3 @@
                 d
                 k) 2))
 ```
-
-: #&lt;void>
-
