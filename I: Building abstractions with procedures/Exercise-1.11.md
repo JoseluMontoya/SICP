@@ -1,7 +1,11 @@
 > A function f is defined by the rule that
 >
-> $$f(n) = \begin{cases} n \quad \text{if} \quad n<3 \newline f(n-1) + 2f(n-2)
-> + 3f(n-3) \quad \text{if} \quad n \geq 3 \end{cases}$$
+> $$
+> f(n) =
+> \begin{cases}
+> n \quad \text{if} \quad n<3 \newline f(n-1) + 2f(n-2) + 3f(n-3) \quad \text{if} \quad n \geq 3
+> \end{cases}
+> $$
 >
 > Write a procedure that computes $f$ by means of a recursive process. Write a
 > procedure that computes $f$ by means of an iterative process.
