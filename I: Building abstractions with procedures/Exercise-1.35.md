@@ -16,13 +16,12 @@
   (try first-guess))
 ```
 
-: #&lt;void>
 
 ```scheme :session,"1.35",:exports,both
 (fixed-point (lambda (x) (+ 1 (/ 1 x))) 1.0)
 ```
-
-: 1.6180327868852458
-
+```
+1.6180327868852458
+```
 And $\\phi$ is 1.618033, which means that our result deviates exactly the ammount associated with `tolerance`.
 
