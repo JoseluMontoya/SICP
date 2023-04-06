@@ -9,7 +9,8 @@
 > (f (lambda (z) (* z (+ z 1)))) 6
 > ```
 > What happens if we (perversely) ask the interpreter to evaluate the combination
-> =(f f)=? Explain.
+> `(f f)`? Explain.
+
 ```scheme 
 (f f)
 (f 2)

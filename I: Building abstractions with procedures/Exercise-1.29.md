@@ -11,6 +11,7 @@
 > of the integral, computed using Simpson’s Rule. Use your procedure to
 > integrate cube between 0 and 1 (with $n = 100$ and $n = 1000$), and compare the
 > results to those of the integral procedure shown above.
+
 Since it's a sum over term, where going to use the procedure `sum`
 
 ```scheme :session,"1.29"

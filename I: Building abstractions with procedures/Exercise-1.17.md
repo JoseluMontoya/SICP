@@ -2,7 +2,7 @@
 > exponentiation by means of repeated multiplication. In a similar way, one can
 > perform integer multiplication by means of repeated addition. The following
 > multiplication procedure (in which it is assumed that our language can only add,
-> not multiply) is analogous to the =expt= procedure:
+> not multiply) is analogous to the `expt` procedure:
 > ```scheme
 > (define (* a b)
 >   (if (= b 0)
@@ -14,6 +14,7 @@
 > and halve, which divides an (even) integer by 2. Using these, design a
 > multiplication procedure analogous to `fast-expt` that uses a logarithmic number
 > of steps.
+
 ```scheme 
 (define (fast-* a b)
   (define (even? b)

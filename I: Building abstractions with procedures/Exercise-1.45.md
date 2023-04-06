@@ -8,9 +8,10 @@
 > x/y^3$) the fixed-point search does converge. Do some experiments to determine
 > how many average damps are required to compute $n^{th}$ roots as a fixed-point
 > search based upon repeated average damping of $y \mapsto x/y^{n−1}$. Use this to
-> implement a simple procedure for computing $n^{th}$ roots using =fixed-point=,
-> =average-damp=, and the =repeated= procedure of Exercise 1.43. Assume that any
+> implement a simple procedure for computing $n^{th}$ roots using `fixed-point`,
+> `average-damp`, and the `repeated` procedure of Exercise 1.43. Assume that any
 > arithmetic operations you need are available as primitives.
+
 ```scheme
 (define tolerance 0.00001)
 

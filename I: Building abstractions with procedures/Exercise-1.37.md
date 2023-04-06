@@ -11,21 +11,22 @@
 >    $$
 >    \frac{N_{1}}{D_{1}+\frac{N_{2}}{\ddots \cdot+\frac{N_{k}}{D_{k}}}}
 >    $$
->    Suppose that =n= and =d= are procedures of one argument (the term index $i$) that
+>    Suppose that `n` and `d` are procedures of one argument (the term index $i$) that
 >    return the $N_i$ and $D_i$ of the terms of the continued fraction. Define a
->    procedure =cont-frac= such that evaluating =(cont-frac n d k)= computes the value
+>    procedure `cont-frac` such that evaluating `(cont-frac n d k)` computes the value
 >    of the $k$-term finite continued fraction. Check your procedure by
 >    approximating $1/\phi$ using
->    #+begin_src scheme
+>    ```scheme
 >    (cont-frac (lambda (i) 1.0)
 >               (lambda (i) 1.0)
 >               k)
->    #+end_src
->    for successive values of =k=. How large must you make =k= in order to get an
+>    ```
+>    for successive values of `k`. How large must you make `k` in order to get an
 >    approximation that is accurate to 4 decimal places?
-> b) If your =cont-frac= procedure generates a recursive process, write one that
+> b) If your `cont-frac` procedure generates a recursive process, write one that
 >    generates an iterative process. If it generates an iterative process, write
 >    one that generates a recursive process.
+
 a)
 
 ```scheme :session,"1.37"

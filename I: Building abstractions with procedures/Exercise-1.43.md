@@ -8,11 +8,12 @@
 > computes $f$ and a positive integer $n$ and returns the procedure that computes
 > the $n^{th}$ repeated application of $f$. Your procedure should be able to be
 > used as follows:
-> #+begin_src scheme
+> ```scheme
 > ((repeated square 2) 5)
 > 625
-> #+end_src
-> Hint: You may find it convenient to use =compose= from Exercise 1.42.
+> ```
+> Hint: You may find it convenient to use `compose` from Exercise 1.42.
+
 ```scheme :exports,none,:session,"1.43"
 (define (compose f g) (lambda (x) (f (g x))))
 ```
